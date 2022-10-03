@@ -25,10 +25,10 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     return `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`
   }
   if (typeof contribution !== 'number') {
-    return `Параметр "Процентная ставка" содержит неправильное значение "${contribution}"`
+    return `Параметр "Начальный взнос" содержит неправильное значение "${contribution}"`
   }
   if (typeof amount !== 'number') {
-    return `Параметр "Процентная ставка" содержит неправильное значение "${amount}"`
+    return `Параметр "Общая стоимость" содержит неправильное значение "${amount}"`
   }
 
 
