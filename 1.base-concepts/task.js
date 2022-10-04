@@ -19,9 +19,7 @@ function solveEquation(a, b, c) {
 
   return arr; // array
 }
-
-
-// код для задачи №2 писать здесь
+//задача №2
 function calculateTotalMortgage(percent, contribution, amount, date) {
   if (typeof percent !== 'number') {
     return `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`
