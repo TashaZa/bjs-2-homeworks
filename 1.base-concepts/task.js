@@ -20,17 +20,18 @@ function solveEquation(a, b, c) {
   return arr; // array
 }
 
+
+// код для задачи №2 писать здесь
 function calculateTotalMortgage(percent, contribution, amount, date) {
   if (typeof percent !== 'number') {
     return `Параметр "Процентная ставка" содержит неправильное значение "${percent}"`
-  }
-  if (typeof contribution !== 'number') {
+  } 
+    if (typeof contribution !== 'number') {
     return `Параметр "Начальный взнос" содержит неправильное значение "${contribution}"`
-  }
+  } 
   if (typeof amount !== 'number') {
     return `Параметр "Общая стоимость" содержит неправильное значение "${amount}"`
   }
-
 
   let totalAmount;
   let s = amount - contribution;
@@ -46,10 +47,8 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   }
   let n = (year2 - year1) * 12 + (month2 - month1);
   let p = percent / 12 / 100;
-
   let amountPerMonth = s * (p + (p / (((1 + p)**n) - 1)));
-
-  // код для задачи №2 писать здесь
+  
   totalAmount=(amountPerMonth * n);
   totalAmount=Number(totalAmount.toFixed(2));
 
