@@ -26,7 +26,7 @@ function debounceDecoratorNew(func, ms) {
   let timerId;
 
   return function wrapper(...args) {
-    if (timerId == undefined) {
+    if (!timerId) {
       func.apply(this, args);
     }
     clearTimeout(timerId);
@@ -40,13 +40,15 @@ function debounceDecorator2(func) {
   let timerId;
   wrapper.count = 0;
   return function wrapper(...args) {
-    if (timerId == undefined) {
+    if (!timerId) {
       func.apply(this, args);
       wrapper.count++;
     }
+    
     clearTimeout(timerId);
     timerId = setTimeout(() => {
       func.apply(this, args)
     }, ms);
   }
 }
+
